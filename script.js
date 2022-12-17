@@ -1,12 +1,10 @@
 //Get case insensitive user input
-let UserChoice = prompt("Rock Paper Scissors");
-
 function capitalise(capWord) {
     let newWord = capWord.charAt(0).toUpperCase() + capWord.slice(1).toLowerCase();
     return newWord;
 }
 
-let playerChoice = capitalise(UserChoice);
+let playerChoice = capitalise(prompt("Rock Paper Scissors"));
 console.log(playerChoice);
 
 //Random Computer Choice
