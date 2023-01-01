@@ -52,20 +52,18 @@ function game(){
     let userScore = 0;
     let computerScore = 0;
 
-    for(let i = 0; i < 5; i++) {
-        let result = playRound(getUserChoice(), getComputerChoice());
+    let result = playRound(getUserChoice(), getComputerChoice());
 
-        if(result == 1) {
-            userScore++;
-        } else if(result == 0) {
-            computerScore++;
-        }
+    if(result == 1) {
+        userScore++;
+    } else if(result == 0) {
+        computerScore++;
     }
-    
+ 
     if(userScore == computerScore) {
         console.log("WHAT A TOUGH GAME. IT WAS A DRAW");
     } else if(userScore > computerScore) {
-        console.log("YOU ARE THE OVERALL WINNER");
+        console.log("YOU ARE THE WINNER");
     } else {
         console.log("YOU LOST THE GAME.");
     }
