@@ -21,13 +21,19 @@ body{
 
 }
 
+.top-head{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
 .head-images{
     display: flex;
     flex-wrap: wrap;
     gap: 120px;
     justify-content: space-between;
-    padding: 50px 0 20px 0;
-    width: 120vh;
+    padding: 20px 0 20px 0;
+    /* width: 120vh; */
 }
 .pic1{
     width:100px; /*width of image*/
@@ -40,6 +46,7 @@ body{
 .pic3{
     width:100px; /*width of image*/
     height:100px; /*height of image*/
+    margin-left: -30px;
 }
 
 .btn-div{
