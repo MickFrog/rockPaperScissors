@@ -72,14 +72,20 @@ body{
     font-size: 2em;
 }
 
-.player{
-    font-family: 'Fredericka the Great', cursive;
-}
 
 .scores{
     display: flex;
     width: 600px;
     justify-content: space-between;
+}
+
+.scores div{
+    display: flex;
+    gap: 15px;
+}
+
+.player{
+    font-family: 'Fredericka the Great', cursive;
 }
 
 .footer{
