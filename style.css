@@ -8,11 +8,33 @@ body{
 
 .heading {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     padding: 20px;
     color: white;
     font-family: 'Fredericka the Great', cursive;
     font-size: 3.5em;
 
+}
+
+.head-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    justify-content: space-between;
+    padding: 50px 0 20px 0;
+    width: 100%;
+}
+.pic1{
+    width:100px; /*width of image*/
+    height:100px; /*height of image*/
+}
+.pic2{
+    width:100px; /*width of image*/
+    height:100px; /*height of image*/
+}
+.pic3{
+    width:100px; /*width of image*/
+    height:100px; /*height of image*/
 }
