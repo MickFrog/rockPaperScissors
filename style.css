@@ -1,6 +1,7 @@
 body{
     background-color: #29282C;
-    /* min-height: 100vh; */
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -37,4 +38,15 @@ body{
 .pic3{
     width:100px; /*width of image*/
     height:100px; /*height of image*/
+}
+
+
+
+
+.footer{
+    display: flex;
+    margin-top: auto;
+    color: white;
+    justify-content: center;
+    padding-bottom: 10px;
 }
