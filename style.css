@@ -64,6 +64,7 @@ body{
 
 .message-div{
     display: flex;
+    flex: 1 0 auto;
     flex-direction: column;
     flex-wrap: wrap;
     color: #FAFFFD;
