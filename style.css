@@ -95,6 +95,16 @@ body{
     font-size: 3em;
 }
 
+.credits{
+    display: flex;
+    flex: 1 0 auto;
+    color: #EFEFD0;
+}
+
+.credits a{
+    color: #EFEFD0;
+}
+
 .footer{
     display: flex;
     margin-top: auto;
