@@ -65,10 +65,12 @@ body{
 .message-div{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     color: #FAFFFD;
     width: 800px;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    gap: 10px;
     font-size: 2em;
     font-family: 'Fredericka the Great', cursive;
 }
@@ -76,6 +78,7 @@ body{
 
 .scores{
     display: flex;
+    flex-wrap: wrap;
     width: 600px;
     height: 120px;
     justify-content: space-between;
@@ -83,6 +86,7 @@ body{
 
 .scores div{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 15px;
 }
