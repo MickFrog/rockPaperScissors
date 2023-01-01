@@ -70,22 +70,25 @@ body{
     align-items: center;
     padding: 20px;
     font-size: 2em;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 
 .scores{
     display: flex;
     width: 600px;
+    height: 120px;
     justify-content: space-between;
 }
 
 .scores div{
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
-.player{
-    font-family: 'Fredericka the Great', cursive;
+.scorecard{
+    font-size: 3em;
 }
 
 .footer{
