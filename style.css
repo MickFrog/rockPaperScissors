@@ -96,8 +96,6 @@ body{
 }
 
 .credits{
-    display: flex;
-    flex: 1 0 auto;
     color: #EFEFD0;
 }
 
@@ -107,8 +105,10 @@ body{
 
 .footer{
     display: flex;
+    flex-wrap: wrap;
     margin-top: auto;
     color: white;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: 10px;
+    width: 150vh;
 }
