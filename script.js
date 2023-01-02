@@ -9,12 +9,22 @@ const rock = document.getElementById('rockBtn');
 const paper = document.getElementById('paperBtn');
 const scissors = document.getElementById('scissorsBtn');
 
+//event listeners
+rock.addEventListener('click', function() {
+    playRound("Rock", getComputerChoice());
+});
+
+paper.addEventListener('click', function(){
+    playRound("Paper", getComputerChoice());
+});
+scissors.addEventListener('click', function(){
+    playRound("Scissors", getComputerChoice());
+});
+
 function getUserChoice(){
     // return capitalise(prompt("Rock Paper Scissors"));
-    //event listeners
-rock.addEventListener('click', rocket);
-paper.addEventListener('click', rocket);
-scissors.addEventListener('click', rocket);
+    let choice = "";
+
 }
 
 //Random Computer Choice
@@ -78,9 +88,7 @@ function game(){
     }
 }
 
-// game();
-
 function rocket() {
-    console.log("Got it");
+    console.log(this);
 } 
 
