@@ -33,21 +33,35 @@ let computerScore = 0;
 
 //Process game round against rules
 function playRound(playerChoice, computerChoice) {
-      if(playerChoice == computerChoice) {
-        message.textContent = "You draw.";
-        return 2;
-    } else if((playerChoice == "Rock" && computerChoice == "Scissors") 
-        || (playerChoice == "Paper" && computerChoice == "Rock") 
-        || (playerChoice == "Scissors" && computerChoice == "Paper")) {
-    
-        message.textContent =  `You win! ${playerChoice} beats ${computerChoice}.`;
-        userScore++
-    } else {
-        message.textContent = `You lose! ${computerChoice} beats ${playerChoice}`;
-        computerScore++;
-    }
-    userCard.textContent = userScore;
-    pcCard.textContent = computerScore;
+    //Process each selection
+    if(userScore < 5 && computerScore < 5) {
+        if(playerChoice == computerChoice) {
+          message.textContent = "You draw.";
+          return 2;
+      } else if((playerChoice == "Rock" && computerChoice == "Scissors") 
+          || (playerChoice == "Paper" && computerChoice == "Rock") 
+          || (playerChoice == "Scissors" && computerChoice == "Paper")) {
+      
+          message.textContent =  `You win! ${playerChoice} beats ${computerChoice}.`;
+          userScore++
+      } else {
+          message.textContent = `You lose! ${computerChoice} beats ${playerChoice}`;
+          computerScore++;
+      }
+      userCard.textContent = userScore;
+      pcCard.textContent = computerScore;
+
+      //Display final results
+      if(userScore == 5 || computerScore == 5){
+          if(userScore == computerScore) {
+              message.textContent = "WHAT A TOUGH GAME. IT WAS A DRAW";
+          } else if(userScore > computerScore) {
+              message.textContent = "YOU ARE THE WINNER";
+          } else {
+              message.textContent = "YOU LOST THE GAME.";
+          }
+      }
+    } 
 }
 
 function game(){
@@ -62,11 +76,5 @@ function game(){
         computerScore++;
     }
  
-    if(userScore == computerScore) {
-        console.log("WHAT A TOUGH GAME. IT WAS A DRAW");
-    } else if(userScore > computerScore) {
-        console.log("YOU ARE THE WINNER");
-    } else {
-        console.log("YOU LOST THE GAME.");
-    }
+    
 }
