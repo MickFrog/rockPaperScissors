@@ -4,8 +4,17 @@ function capitalise(capWord) {
     return newWord;
 }
 
+//Get button elements needed
+const rock = document.getElementById('rockBtn');
+const paper = document.getElementById('paperBtn');
+const scissors = document.getElementById('scissorsBtn');
+
 function getUserChoice(){
-    return capitalise(prompt("Rock Paper Scissors"));
+    // return capitalise(prompt("Rock Paper Scissors"));
+    //event listeners
+rock.addEventListener('click', rocket);
+paper.addEventListener('click', rocket);
+scissors.addEventListener('click', rocket);
 }
 
 //Random Computer Choice
@@ -70,13 +79,6 @@ function game(){
 }
 
 // game();
-
-//Get button elements needed
-const rock = document.getElementById('rockBtn');
-const paper = document.getElementById('paperBtn');
-const scissors = document.getElementById('scissorsBtn');
-
-rock.addEventListener('click', rocket);
 
 function rocket() {
     console.log("Got it");
