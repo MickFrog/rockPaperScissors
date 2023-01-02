@@ -69,4 +69,16 @@ function game(){
     }
 }
 
-game();
+// game();
+
+//Get button elements needed
+const rock = document.getElementById('rockBtn');
+const paper = document.getElementById('paperBtn');
+const scissors = document.getElementById('scissorsBtn');
+
+rock.addEventListener('click', rocket);
+
+function rocket() {
+    console.log("Got it");
+} 
+
