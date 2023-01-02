@@ -28,8 +28,8 @@ function getComputerChoice(){
 }
 
 //scores
-    let userScore = 0;
-    let computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 
 //Process game round against rules
 function playRound(playerChoice, computerChoice) {
@@ -41,11 +41,13 @@ function playRound(playerChoice, computerChoice) {
         || (playerChoice == "Scissors" && computerChoice == "Paper")) {
     
         message.textContent =  `You win! ${playerChoice} beats ${computerChoice}.`;
-    return 1;
+        userScore++
     } else {
         message.textContent = `You lose! ${computerChoice} beats ${playerChoice}`;
-        return 0;
+        computerScore++;
     }
+    userCard.textContent = userScore;
+    pcCard.textContent = computerScore;
 }
 
 function game(){
