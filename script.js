@@ -52,29 +52,16 @@ function playRound(playerChoice, computerChoice) {
       pcCard.textContent = computerScore;
 
       //Display final results
-      if(userScore == 5 || computerScore == 5){
-          if(userScore == computerScore) {
-              message.textContent = "WHAT A TOUGH GAME. IT WAS A DRAW";
-          } else if(userScore > computerScore) {
-              message.textContent = "YOU ARE THE WINNER";
-          } else {
-              message.textContent = "YOU LOST THE GAME.";
-          }
-      }
+      finalResults(userScore, computerScore);
     } 
 }
 
-function game(){
-    let userScore = 0;
-    let computerScore = 0;
-
-    let result = playRound(getUserChoice(), getComputerChoice());
-
-    if(result == 1) {
-        userScore++;
-    } else if(result == 0) {
-        computerScore++;
+function finalResults(user, comp) {
+    if(user == 5 || comp == 5){
+        if(user > comp) {
+            message.textContent = "YOU ARE THE WINNER";
+        } else {
+            message.textContent = "YOU LOST THE GAME.";
+        }
     }
- 
-    
 }
