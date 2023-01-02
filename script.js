@@ -1,9 +1,3 @@
-//Get case insensitive user input
-function capitalise(capWord) {
-    let newWord = capWord.charAt(0).toUpperCase() + capWord.slice(1).toLowerCase();
-    return newWord;
-}
-
 //Get button elements needed
 const rock = document.getElementById('rockBtn');
 const paper = document.getElementById('paperBtn');
@@ -21,27 +15,11 @@ scissors.addEventListener('click', function(){
     playRound("Scissors", getComputerChoice());
 });
 
-function getUserChoice(){
-    // return capitalise(prompt("Rock Paper Scissors"));
-    let choice = "";
-
-}
-
 //Random Computer Choice
 const choices = ["Rock", "Paper", "Scissors"];
 
 function getComputerChoice(){
     return choices[Math.floor(Math.random()*choices.length)];
-}
-
-function validateUserChoice(userChoice) {
-    for(let i = 0; i < choices.length; i++) {
-        if(userChoice == choices[i]){
-            return true;
-        }
-    }
-
-    return false;
 }
 
 //Process game round against rules
@@ -87,8 +65,3 @@ function game(){
         console.log("YOU LOST THE GAME.");
     }
 }
-
-function rocket() {
-    console.log(this);
-} 
-
