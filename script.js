@@ -3,6 +3,11 @@ const rock = document.getElementById('rockBtn');
 const paper = document.getElementById('paperBtn');
 const scissors = document.getElementById('scissorsBtn');
 
+//Get message and score cards elements
+const message = document.getElementById('message');
+const userCard = document.getElementById("userScore");
+const pcCard = document.getElementById("pcScore");
+
 //event listeners
 rock.addEventListener('click', function() {
     playRound("Rock", getComputerChoice());
@@ -22,25 +27,23 @@ function getComputerChoice(){
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
+//scores
+    let userScore = 0;
+    let computerScore = 0;
+
 //Process game round against rules
 function playRound(playerChoice, computerChoice) {
-    //validate input
-    if(!validateUserChoice(playerChoice)) {
-        console.log("Invalid input. Point given to computer.")
-        return 0;
-    }
-
-    if(playerChoice == computerChoice) {
-        console.log("You draw.");
+      if(playerChoice == computerChoice) {
+        message.textContent = "You draw.";
         return 2;
     } else if((playerChoice == "Rock" && computerChoice == "Scissors") 
         || (playerChoice == "Paper" && computerChoice == "Rock") 
         || (playerChoice == "Scissors" && computerChoice == "Paper")) {
     
-    console.log(`You win! ${playerChoice} beats ${computerChoice}.`);
+        message.textContent =  `You win! ${playerChoice} beats ${computerChoice}.`;
     return 1;
     } else {
-        console.log(`You lose! ${computerChoice} beats ${playerChoice}`);
+        message.textContent = `You lose! ${computerChoice} beats ${playerChoice}`;
         return 0;
     }
 }
