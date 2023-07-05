@@ -1,127 +1,131 @@
-body{
-    background-color: #29282C;
-    min-height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 0px; margin: 0px;
+:root {
+  --headingSize: calc(2vmin + 20px);
+  --textSize: calc(2vmin + 10px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #29282c;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  padding: 0px;
+  margin: 0px;
 }
 
 .heading {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-    color: white;
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 3.5em;
-
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 4.5rem;
 }
 
-.top-head{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+.game-container {
+  flex: 1 0 auto;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
-.head-images{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 120px;
-    justify-content: space-between;
-    padding: 20px 0 20px 0;
-    /* width: 120vh; */
-}
-.pic1{
-    width:100px; /*width of image*/
-    height:100px; /*height of image*/
-}
-.pic2{
-    width:100px; /*width of image*/
-    height:100px; /*height of image*/
-}
-.pic3{
-    width:100px; /*width of image*/
-    height:100px; /*height of image*/
-    margin-left: -30px;
+.btn-div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background: #517664;
+  border-radius: 10px;
+  margin: 20px 40px;
+  padding: 20px 10px;
 }
 
-.btn-div{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    background: #517664;
-    border-radius: 10px;
-    margin: 20px 40px;
-    height: 280px;
-    width: 900px;
-    padding: 10px;
+.btn-div > button {
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;
+  background-color: #d3fcd5;
 }
 
-.btn-div button{
-    width: 180px;
-    height: 180px;
-    border-radius: 25px;
-    background-color: #D3FCD5;
+.btn-div button img {
+  width: 80%;
+  height: 80%;
 }
 
-.btn-div button img{
-    width: 100px;
-    height: 100px;
+.message-div {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #fafffd;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  font-size: var(--textSize);
+  font-family: "Fredericka the Great", cursive;
 }
 
-.message-div{
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
-    flex-wrap: wrap;
-    color: #FAFFFD;
-    width: 800px;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
-    font-size: 2em;
-    font-family: 'Fredericka the Great', cursive;
+.scores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-
-.scores{
-    display: flex;
-    flex-wrap: wrap;
-    width: 600px;
-    height: 120px;
-    justify-content: space-between;
+.scores > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
 }
 
-.scores div{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
+.scorecard {
+  font-size: var(--headingSize);
 }
 
-.scorecard{
-    font-size: 3em;
+.credits {
+  color: #efefd0;
+  margin-left: 20px;
 }
 
-.credits{
-    color: #EFEFD0;
+.credits a {
+  color: #efefd0;
 }
 
-.credits a{
-    color: #EFEFD0;
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px 10px 10px;
+
+  font-size: calc(2vmin + 2px);
 }
 
-.footer{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: auto;
-    color: white;
-    justify-content: space-between;
-    padding-bottom: 10px;
-    width: 150vh;
+@media (max-width: 700px) {
+  .heading {
+    font-size: var(--headingSize);
+    padding: 5px;
+  }
+
+  .game-container {
+    padding-top: 10%;
+  }
+
+  .btn-div > button {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
 }

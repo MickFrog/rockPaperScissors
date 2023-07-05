@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
-        <title>Rock Paper Scissors</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
 
-    <body>
-        
-        <div class="heading">
-            <div class="top-head">
-                <img class="pic1" src="./images/rock.png" alt="Rock Image">
-                <div>Rock. Paper. Scissors.</div>
-                <img class="pic3" src="./images/scissors.png" alt="Scissors Image">
-            </div>
-            <div class="head-images">
-                <img class="pic2" src="./images/paper.png" alt="Paper Image">
-            </div>
-        </div>
-        
-        <div class="btn-div">
-            <button id="rockBtn">
-                <img src="./images/rock-sign.png" alt="Rock Sign">
-            </button>
-            <button id="paperBtn">
-                <img src="./images/paper-sign.png" alt="Paper sign">
-            </button>
-            <button id="scissorsBtn">
-                <img src="./images/scissors-sign.png" alt="Scissors sign">
-            </button>
-        </div>
-        
-        <div class="message-div">
-            <div class="scores">
-                <div>
-                    <div>Your Score: </div>
-                    <div class="scorecard" id="userScore">0</div>
-                </div>
-                <div>
-                    <div>Computer Score: </div>
-                    <div class="scorecard" id="pcScore">0</div>
-                </div>
-            </div>
-            
-            <div id="message">Let's see how this goes...</div>
+  <body>
+    <div class="heading">Rock. Paper. Scissors.</div>
+
+    <div class="game-container">
+      <div class="btn-div">
+        <button id="rockBtn">
+          <img src="./images/rock-sign.png" alt="Rock Sign" />
+        </button>
+        <button id="paperBtn">
+          <img src="./images/paper-sign.png" alt="Paper sign" />
+        </button>
+        <button id="scissorsBtn">
+          <img src="./images/scissors-sign.png" alt="Scissors sign" />
+        </button>
+      </div>
+
+      <div class="message-div">
+        <div class="scores">
+          <div>
+            <div>Your Score:</div>
+            <div class="scorecard" id="userScore">0</div>
+          </div>
+          <div>
+            <div>Computer Score:</div>
+            <div class="scorecard" id="pcScore">0</div>
+          </div>
         </div>
 
-        
-        <div class="footer">
-            <div>Copyright &copy; The Odin Project | MickFrog</div>
-            <div class="credits">Credit to &nbsp;<a href="http://clipart-library.com/" target="_blank"> Clipart Library</a>&nbsp; for its free image resources used here.</div>
-        </div>
-        
-        <script src="./script.js"></script>
-    </body>
+        <div id="message">Let's see how this goes...</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>Copyright &copy; The Odin Project | MickFrog</div>
+      <div class="credits">
+        Credit to &nbsp;<a href="http://clipart-library.com/" target="_blank">
+          Clipart Library</a
+        >&nbsp; for its free image resources used here.
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
